@@ -21,6 +21,7 @@ Serve: `npm start`
 
 ## References
 
+- https://reactjs.org/docs/code-splitting.html
 - https://github.com/Microsoft/TypeScript-React-Starter
 - https://facebook.github.io/create-react-app/docs/adding-typescript
 - https://redux.js.org/recipes/usage-with-typescript

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
@@ -8,8 +8,8 @@ import "typeface-roboto";
 
 import configureStore from "./store";
 
-import NotFound from "./pages/NotFound";
-import Top from "./pages/Top";
+const NotFound = lazy(() => import("./pages/NotFound"));
+const Top = lazy(() => import("./pages/Top"));
 
 import * as serviceWorker from "./serviceWorker";
 
@@ -19,10 +19,12 @@ const Root = () => (
   <Provider store={store}>
     <PersistGate loading={null} persistor={persistor}>
       <Router>
-        <Switch>
-          <Route exact={true} path="/" component={Top} />
-          <Route component={NotFound} />
-        </Switch>
+        <Suspense fallback={<div>Loading...</div>}>
+          <Switch>
+            <Route exact={true} path="/" component={Top} />
+            <Route component={NotFound} />
+          </Switch>
+        </Suspense>
       </Router>
     </PersistGate>
   </Provider>
