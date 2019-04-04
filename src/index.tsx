@@ -1,10 +1,34 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React from "react";
+import ReactDOM from "react-dom";
+import { Provider } from "react-redux";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { PersistGate } from "redux-persist/integration/react";
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import "typeface-roboto";
+
+import configureStore from "./store";
+
+import NotFound from "./pages/NotFound";
+import Top from "./pages/Top";
+
+import * as serviceWorker from "./serviceWorker";
+
+const { store, persistor } = configureStore();
+
+const Root = () => (
+  <Provider store={store}>
+    <PersistGate loading={null} persistor={persistor}>
+      <Router>
+        <Switch>
+          <Route exact={true} path="/" component={Top} />
+          <Route component={NotFound} />
+        </Switch>
+      </Router>
+    </PersistGate>
+  </Provider>
+);
+
+ReactDOM.render(<Root />, document.getElementById("root"));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
