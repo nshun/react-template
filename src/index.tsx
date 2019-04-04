@@ -4,8 +4,6 @@ import { Provider } from "react-redux";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { PersistGate } from "redux-persist/integration/react";
 
-import "typeface-roboto";
-
 import configureStore from "./store";
 
 const NotFound = lazy(() => import("./pages/NotFound"));
