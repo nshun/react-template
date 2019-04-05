@@ -31,6 +31,7 @@ function GithubButton(props: Readonly<WithStyles<typeof styles>>) {
     <Button
       target="_blank"
       href="https://github.com/nshun/react-template"
+      rel="noopener"
       size="small"
       variant="outlined"
       className={classes.githubButton}
