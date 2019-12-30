@@ -30,10 +30,10 @@ const styles = (theme: Theme) =>
       display: "flex",
       top: "0",
       right: "0",
-      padding: theme.spacing.unit * 2,
+      padding: theme.spacing() * 2,
     },
     wrapper: {
-      margin: theme.spacing.unit * 2,
+      margin: theme.spacing() * 2,
     },
     content: {
       textAlign: "center",
@@ -57,7 +57,7 @@ class Top extends React.Component<WithStyles<typeof styles>, {}> {
           </Typography>
           <Fab
             component={Link}
-            {...{ to: "/404" } as any}
+            {...({ to: "/404" } as any)}
             variant="extended"
             color="primary"
             size="large"

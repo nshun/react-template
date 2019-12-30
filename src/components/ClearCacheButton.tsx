@@ -23,7 +23,7 @@ const { persistor } = configureStore();
 const styles = (theme: Theme) =>
   createStyles({
     wrapper: {
-      margin: theme.spacing.unit * 2,
+      margin: theme.spacing() * 2,
     },
   });
 
@@ -52,7 +52,6 @@ class CountDownDialog extends React.Component<
   };
 
   public render() {
-    const { classes } = this.props;
     const { open } = this.state;
 
     return (
