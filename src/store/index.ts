@@ -22,6 +22,6 @@ export default function configureStore() {
         traceLimit: 25,
       })
   );
-  const persistor = persistStore(store);
+  const persistor = persistStore(store as any);
   return { store, persistor };
 }

@@ -26,11 +26,11 @@ const styles = (theme: Theme) =>
       flexDirection: "row",
       justifyContent: "center",
       alignItems: "center",
-      padding: theme.spacing.unit * 5,
+      padding: theme.spacing() * 5,
     },
     message: {
       textAlign: "right",
-      marginLeft: theme.spacing.unit * 2,
+      marginLeft: theme.spacing() * 2,
     },
   });
 
@@ -48,7 +48,7 @@ function NouFound(props: WithStyles<typeof styles>) {
       <div>
         <Button
           component={Link}
-          {...{ to: "/" } as any}
+          {...({ to: "/" } as any)}
           variant="contained"
           color="primary"
         >

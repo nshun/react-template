@@ -11,9 +11,6 @@ const theme = createMuiTheme({
     primary: blue,
     secondary: pink,
   },
-  typography: {
-    useNextVariants: true,
-  },
 });
 
 function withRoot<P>(Component: React.ComponentType<P>) {

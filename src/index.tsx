@@ -4,12 +4,11 @@ import { Provider } from "react-redux";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { PersistGate } from "redux-persist/integration/react";
 
+import * as serviceWorker from "./serviceWorker";
 import configureStore from "./store";
 
 const NotFound = lazy(() => import("./pages/NotFound"));
 const Top = lazy(() => import("./pages/Top"));
-
-import * as serviceWorker from "./serviceWorker";
 
 const { store, persistor } = configureStore();
 

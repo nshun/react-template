@@ -20,7 +20,7 @@ const styles = (theme: Theme) =>
         color: theme.palette.getContrastText(grey[100]),
         backgroundColor: grey[100],
       },
-      margin: theme.spacing.unit,
+      margin: theme.spacing(),
     },
   });
 
