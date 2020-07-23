@@ -10,7 +10,6 @@ import {
   WithStyles,
 } from "@material-ui/core";
 
-import ClearCacheButton from "../components/ClearCacheButton";
 import GithubButton from "../components/GithubButton";
 
 import withRoot from "../withRoot";
@@ -48,7 +47,6 @@ class Top extends React.Component<WithStyles<typeof styles>, {}> {
       <div className={classes.root}>
         <div className={classes.nav}>
           <GithubButton />
-          <ClearCacheButton />
         </div>
         <div className={classes.content}>
           <Typography variant="h1">React App</Typography>

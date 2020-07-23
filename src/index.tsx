@@ -1,30 +1,21 @@
 import React, { lazy, Suspense } from "react";
 import ReactDOM from "react-dom";
-import { Provider } from "react-redux";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { PersistGate } from "redux-persist/integration/react";
 
 import * as serviceWorker from "./serviceWorker";
-import configureStore from "./store";
 
 const NotFound = lazy(() => import("./pages/NotFound"));
 const Top = lazy(() => import("./pages/Top"));
 
-const { store, persistor } = configureStore();
-
 const Root = () => (
-  <Provider store={store}>
-    <PersistGate loading={null} persistor={persistor}>
-      <Router>
-        <Suspense fallback={<div>Loading...</div>}>
-          <Switch>
-            <Route exact={true} path="/" component={Top} />
-            <Route component={NotFound} />
-          </Switch>
-        </Suspense>
-      </Router>
-    </PersistGate>
-  </Provider>
+  <Router>
+    <Suspense fallback={<div>Loading...</div>}>
+      <Switch>
+        <Route exact={true} path="/" component={Top} />
+        <Route component={NotFound} />
+      </Switch>
+    </Suspense>
+  </Router>
 );
 
 ReactDOM.render(<Root />, document.getElementById("root"));
