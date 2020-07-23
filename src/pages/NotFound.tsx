@@ -1,62 +1,54 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-import {
-  Button,
-  createStyles,
-  Theme,
-  Typography,
-  withStyles,
-  WithStyles,
-} from "@material-ui/core";
+import { Box, Button, Typography } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
 
-import withRoot from "../withRoot";
+const useStyle = makeStyles((theme) => ({
+  root: {
+    position: 'absolute',
+    top: 0,
+    bottom: 0,
+    right: 0,
+    left: 0,
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  wrapper: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: theme.spacing() * 5,
+  },
+  message: {
+    textAlign: 'right',
+    marginLeft: theme.spacing() * 2,
+  },
+}));
 
-const styles = (theme: Theme) =>
-  createStyles({
-    root: {
-      textAlign: "center",
-      position: "absolute",
-      top: "50%",
-      left: "50%",
-      transform: "translateY(-50%) translateX(-50%)",
-    },
-    wrapper: {
-      display: "flex",
-      flexDirection: "row",
-      justifyContent: "center",
-      alignItems: "center",
-      padding: theme.spacing() * 5,
-    },
-    message: {
-      textAlign: "right",
-      marginLeft: theme.spacing() * 2,
-    },
-  });
+const NotFound: React.FC = () => {
+  const classes = useStyle();
 
-function NouFound(props: WithStyles<typeof styles>) {
-  const { classes } = props;
+  document.title = 'ページが見つかりません';
 
   return (
-    <div className={classes.root}>
-      <div className={classes.wrapper}>
+    <Box className={classes.root}>
+      <Box className={classes.wrapper}>
         <Typography variant="h4">404</Typography>
         <Typography variant="subtitle1" className={classes.message}>
-          This page could not be found.
+          ページが見つかりません
         </Typography>
-      </div>
-      <div>
-        <Button
-          component={Link}
-          {...({ to: "/" } as any)}
-          variant="contained"
-          color="primary"
-        >
+      </Box>
+      <Box>
+        <Button component={Link} to="/" variant="contained" color="primary">
           TOP
         </Button>
-      </div>
-    </div>
+      </Box>
+    </Box>
   );
-}
+};
 
-export default withRoot(withStyles(styles)(NouFound));
+export default NotFound;

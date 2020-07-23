@@ -1,8 +1,8 @@
-import * as React from "react";
+import * as React from 'react';
 
-import { blue, pink } from "@material-ui/core/colors";
-import CssBaseline from "@material-ui/core/CssBaseline";
-import { createMuiTheme, MuiThemeProvider } from "@material-ui/core/styles";
+import { blue, pink } from '@material-ui/core/colors';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
 
 // A theme with custom primary and secondary color.
 // It's optional.
