@@ -7,7 +7,7 @@
     "build": "react-scripts build",
     "postbuild": "npx rimraf build/**/*.map",
     "test": "react-scripts test",
-    "format": "prettier --write src/**/*.{js,ts,tsx,json,css}",
+    "format": "prettier --write src/**/*.{ts,tsx}",
     "lint": "eslint --fix --format stylish src/**/*.{js,ts,tsx} --no-error-on-unmatched-pattern"
   },
   "repository": {
