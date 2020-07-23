@@ -10,8 +10,6 @@ import {
   WithStyles,
 } from '@material-ui/core';
 
-import withRoot from '../withRoot';
-
 const styles = (theme: Theme) =>
   createStyles({
     root: {
@@ -54,4 +52,4 @@ function NouFound(props: WithStyles<typeof styles>) {
   );
 }
 
-export default withRoot(withStyles(styles)(NouFound));
+export default withStyles(styles)(NouFound);

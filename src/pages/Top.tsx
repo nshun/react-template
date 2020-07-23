@@ -12,8 +12,6 @@ import {
 
 import GithubButton from '../components/GithubButton';
 
-import withRoot from '../withRoot';
-
 const styles = (theme: Theme) =>
   createStyles({
     root: {
@@ -69,4 +67,4 @@ class Top extends React.Component<WithStyles<typeof styles>> {
   }
 }
 
-export default withRoot(withStyles(styles)(Top));
+export default withStyles(styles)(Top);

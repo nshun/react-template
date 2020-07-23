@@ -1,13 +1,14 @@
-import React, { lazy, Suspense } from "react";
-import ReactDOM from "react-dom";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import React, { lazy, Suspense } from 'react';
+import ReactDOM from 'react-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-import * as serviceWorker from "./serviceWorker";
+import * as serviceWorker from './serviceWorker';
+import withRoot from './components/withRoot';
 
-const NotFound = lazy(() => import("./pages/NotFound"));
-const Top = lazy(() => import("./pages/Top"));
+const NotFound = lazy(() => import('./pages/NotFound'));
+const Top = lazy(() => import('./pages/Top'));
 
-const Root = () => (
+const AppRoot = () => (
   <Router>
     <Suspense fallback={<div>Loading...</div>}>
       <Switch>
@@ -18,7 +19,9 @@ const Root = () => (
   </Router>
 );
 
-ReactDOM.render(<Root />, document.getElementById("root"));
+const Root = withRoot(AppRoot);
+
+ReactDOM.render(<Root />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
