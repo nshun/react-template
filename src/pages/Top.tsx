@@ -1,5 +1,5 @@
-import * as React from "react";
-import { Link } from "react-router-dom";
+import * as React from 'react';
+import { Link } from 'react-router-dom';
 
 import {
   createStyles,
@@ -8,38 +8,38 @@ import {
   Typography,
   withStyles,
   WithStyles,
-} from "@material-ui/core";
+} from '@material-ui/core';
 
-import GithubButton from "../components/GithubButton";
+import GithubButton from '../components/GithubButton';
 
-import withRoot from "../withRoot";
+import withRoot from '../withRoot';
 
 const styles = (theme: Theme) =>
   createStyles({
     root: {
-      display: "flex",
-      flexDirection: "column",
-      justifyContent: "center",
-      alignItems: "center",
-      height: "100vh",
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      alignItems: 'center',
+      height: '100vh',
     },
     nav: {
-      overflow: "hidden",
-      position: "fixed",
-      display: "flex",
-      top: "0",
-      right: "0",
+      overflow: 'hidden',
+      position: 'fixed',
+      display: 'flex',
+      top: '0',
+      right: '0',
       padding: theme.spacing() * 2,
     },
     wrapper: {
       margin: theme.spacing() * 2,
     },
     content: {
-      textAlign: "center",
+      textAlign: 'center',
     },
   });
 
-class Top extends React.Component<WithStyles<typeof styles>, {}> {
+class Top extends React.Component<WithStyles<typeof styles>> {
   public render() {
     const { classes } = this.props;
 
@@ -55,7 +55,7 @@ class Top extends React.Component<WithStyles<typeof styles>, {}> {
           </Typography>
           <Fab
             component={Link}
-            {...({ to: "/404" } as any)}
+            to="/404"
             variant="extended"
             color="primary"
             size="large"

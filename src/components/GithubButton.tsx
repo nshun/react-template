@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 import {
   Button,
@@ -6,17 +6,17 @@ import {
   Theme,
   withStyles,
   WithStyles,
-} from "@material-ui/core";
+} from '@material-ui/core';
 
-import { grey } from "@material-ui/core/colors";
+import { grey } from '@material-ui/core/colors';
 
 const styles = (theme: Theme) =>
   createStyles({
     githubButton: {
-      textTransform: "none",
+      textTransform: 'none',
       color: theme.palette.getContrastText(grey[900]),
       backgroundColor: grey[900],
-      "&:hover": {
+      '&:hover': {
         color: theme.palette.getContrastText(grey[100]),
         backgroundColor: grey[100],
       },
