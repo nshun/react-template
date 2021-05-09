@@ -1,8 +1,11 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/602d63dc-f124-411d-8b46-7df101d3e6f2/deploy-status)](https://app.netlify.com/sites/react-redux-template/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/602d63dc-f124-411d-8b46-7df101d3e6f2/deploy-status)](https://app.netlify.com/sites/nshun-react-template/deploys)
 
 # react template
 
-DEMO: https://template.nnshun.com/
+DEMOS:
+- https://nshun-react-template.netlify.app/
+- https://react-template-pmx7.pages.dev/
+- https://nshun.github.io/react-template
 
 Build: `npm run build`
 
