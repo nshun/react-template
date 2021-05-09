@@ -1,11 +1,12 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/602d63dc-f124-411d-8b46-7df101d3e6f2/deploy-status)](https://app.netlify.com/sites/nshun-react-template/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/602d63dc-f124-411d-8b46-7df101d3e6f2/deploy-status)](https://nshun-react-template.netlify.app/)
+[![github pages](https://github.com/nshun/react-template/actions/workflows/gh-pages.yml/badge.svg?branch=master&event=push)](https://nshun.github.io/react-template)
 
 # react template
 
 DEMOS:
-- https://nshun-react-template.netlify.app/
-- https://react-template-pmx7.pages.dev/
-- https://nshun.github.io/react-template
+- Github Pages: https://nshun.github.io/react-template
+- CloudFlare Pages: https://react-template-pmx7.pages.dev/
+- Netlify: https://nshun-react-template.netlify.app/
 
 Build: `npm run build`
 
