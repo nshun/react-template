@@ -9,7 +9,7 @@ const NotFound = lazy(() => import('./pages/NotFound'));
 const Top = lazy(() => import('./pages/Top'));
 
 const AppRoot = () => (
-  <Router>
+  <Router basename={process.env.PUBLIC_URL}>
     <Suspense fallback={<div>Loading...</div>}>
       <Switch>
         <Route exact={true} path="/" component={Top} />
